@@ -28,6 +28,7 @@ A Java-based console application for managing employee records and attendance, d
 
 ## Project Structure
 
+<pre> ```
 MotorPH/
 ├── src/
 │   └── MotorPH/
@@ -46,7 +47,7 @@ MotorPH/
 │   └── FileHandlerTest.java
 ├── Employees.csv
 ├── Attendance.csv
-
+``` </pre>
 
 ---
 
