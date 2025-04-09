@@ -1,29 +1,66 @@
-# MO-IT101-Group3 ComprogCuties
+MotorPH Employee Attendance & Payroll Management System
+A Java-based console application for managing employee records and attendance, designed to simulate a small-scale HR/payroll system.
 
-## 📋 Project Overview
-This project is part of our MotorPH Payroll System implementation. It includes functionalities such as:
-- Add employee records
-- Record attendance
-- Display employee details
-- Calculate weekly hours & salary (including SSS, PhilHealth, Pag-IBIG, and withholding tax)
-- Exit option
+Features
+Add, edit, view, or delete employee records
+Record attendance with clock-in/clock-out times
+View weekly hours worked and salary summaries
+Calculate gross and net salaries with deductions:
+SSS
+PhilHealth
+Pag-IBIG
+Withholding Tax
+Data stored in CSV files for portability
+Technologies Used
+Java SE
+OpenCSV for CSV parsing
+Java Time API (LocalDate, LocalTime, Duration)
+Project Structure
+MotorPH/
+├── src/
+│   └── MotorPH/
+│       ├── Main.java
+│       ├── MainController.java
+│       ├── EmployeeManager.java
+│       ├── AttendanceManager.java
+│       ├── FileHandler.java
+│       ├── Global.java
+│       ├── EmployeeClass.java
+├── test/
+│   ├── AttendanceManagerTest.java
+│   ├── EmployeeManagerTest.java
+│   ├── IntegrationTest.java
+│   ├── EdgeCaseTest.java
+│   └── FileHandlerTest.java
+├── Employees.csv
+├── Attendance.csv
+How to Run
+Clone the repository
 
-## 🛠️ Technologies Used
-- Java (Apache NetBeans)
-- Visual Studio Code
+Open in your Java IDE (e.g., NetBeans, IntelliJ)
 
-## 👥 Team Members
-- Christian Narte
-- Mikhaela Angela Roxas
-- Eliza Shane Tejada
-- Ioshua Jericho Surigao
-- Jose Lyan Santos
-- Katrina Mae Salonoy
-- Rhea Umali
+Make sure Employees.csv and Attendance.csv exist in the root MotorPH/ directory.
 
+Run Main.java
+The console-based menu will guide your interaction.
 
-## 👨‍🏫 Mentor
-- Kimberly Cruz
+Notes
+Dates must follow MM/dd/yyyy format.
+Time inputs use H:mm (24-hour) format.
+Deductions are computed only at end-of-month weeks.
+Testing
+All unit and integration tests are located under the test/ directory and written using JUnit 4.
 
-## 📝 Notes
-- Further updates and improvements will be added in future milestones.
+Test Coverage:
+EmployeeManagerTest: Add, edit, delete employees, field mapping
+AttendanceManagerTest: Attendance logging, monthly summaries, deduction computations
+FileHandlerTest: File read/write accuracy for employees
+IntegrationTest: End-to-end workflow (employee creation, attendance, salary computation)
+EdgeCaseTest: Handles invalid/edge input (negative hours, invalid time format, duplicate logs)
+To run tests, ensure JUnit 4 is set up in your IDE and execute the test classes.
+
+Future Improvements
+GUI Interface (JavaFX or Swing)
+User authentication
+User Access
+© 2025 MotorPH Java Payroll System
